@@ -1,0 +1,60 @@
+# ====== Python / Django ======
+
+# Entornos virtuales
+backend/.venv/
+venv/
+env/
+ENV/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos local
+backend/db.sqlite3
+
+# Archivos de entorno
+*.env
+*.env.*
+.envrc
+.venvrc
+
+# Logs
+*.log
+
+# Migraciones compiladas
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+
+# Archivos estáticos y media (opcional ignorarlos si los generas dinámicamente)
+backend/staticfiles/
+backend/media/
+
+# ====== Node / React / Vite ======
+
+# Dependencias
+frontend/node_modules/
+
+# Builds
+frontend/dist/
+frontend/build/
+
+# Archivos de entorno
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ====== General ======
+
+# Archivos de IDEs / Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
