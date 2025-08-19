@@ -48,11 +48,16 @@
    python manage.py runserver 0.0.0.0:8000
    ```
    
-8. Corre el servidor frontend:
+8. Instala dependencias en la ruta \frontend:
+   ```bash
+   npm install
+   ```
+
+9. Ejecuta el servidor frontend:
    ```bash
    npm run dev
    ```
-
+   
 ---
 
 ## 💻 Tecnologias usadas
