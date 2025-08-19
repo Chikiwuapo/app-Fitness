@@ -1,0 +1,93 @@
+/* Survey pages shared layout */
+.surveyPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+  overflow-x: hidden;
+  padding: 56px 20px;
+}
+
+.surveyHero {
+  max-width: 960px;
+  margin: 0 auto 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.surveyKpis {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.surveyTitle {
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.surveySubtitle {
+  margin: 0;
+  color: #d0d0d0;
+  font-size: 18px;
+}
+
+/* subtle animated glow */
+.glow {
+  position: fixed;
+  top: -80px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(closest-side, rgba(255,38,38,0.35), rgba(255,38,38,0.08), transparent);
+  filter: blur(14px);
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+/* extra subtle glow on the left */
+.glow.left {
+  left: -90px;
+  right: auto;
+  top: 40vh;
+  width: 180px;
+  height: 180px;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  from { transform: translateY(0px); opacity: 0.9; }
+  to { transform: translateY(12px); opacity: 0.7; }
+}
+
+/* container for forms/cards */
+.surveyContainer {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .surveyTitle { font-size: 30px; }
+  .surveySubtitle { font-size: 16px; }
+}

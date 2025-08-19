@@ -1,0 +1,12 @@
+.title { color: #0f172a; font-weight: 800; margin: 0 0 0.5rem; text-align: center; }
+.helper { text-align: center; color: #475569; margin-bottom: 1rem; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.5rem; }
+.card { background: #f1f5f9; border: 2px solid transparent; border-radius: 16px; padding: 1rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; font-weight: 700; color: #0f172a; }
+.active { border-color: #10b981; background: #ecfdf5; }
+.icon { font-size: 1.25rem; }
+.cardLabel { font-size: 1rem; }
+.skip { display: block; width: 100%; text-align: center; color: #059669; background: transparent; border: none; font-weight: 700; padding: 0.5rem 0; }
+
+@media (max-width: 640px) {
+  .cards { grid-template-columns: 1fr; }
+}

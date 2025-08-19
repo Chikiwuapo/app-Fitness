@@ -1,0 +1,81 @@
+.form {
+  max-width: 1200px;
+  width: min(95vw, 1200px);
+  margin: 0 auto;
+  padding: 2.75rem 2rem 2.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+}
+
+.progress {
+  position: relative;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff2626, #e31b1b);
+}
+.progressText {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+}
+
+.step { margin-bottom: 1.25rem; }
+.step h2 { color: #ffffff; font-weight: 800; margin: 0 0 0.9rem; font-size: 1.5rem; }
+.label { font-weight: 700; margin-bottom: 0.25rem; display: block; color: #ffffff; }
+.input, .select {
+  width: 100%;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+  padding: 1.05rem 1.1rem;
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.selectGoal option, .selectGoal optgroup { color: #000; background: #ffffff; }
+.input::placeholder { color: #9b9b9b; }
+.input:focus, .select:focus { border-color: #ff2626; box-shadow: 0 0 8px rgba(255, 38, 38, 0.7); transform: scale(1.01); }
+
+.summary { margin-top: 1rem; background: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 10px; color: #ffffff; }
+
+.actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+.primary, .secondary {
+  padding: 0.85rem 1.15rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+}
+.primary { background: #ffffff; color: #000; transition: background 0.2s ease, transform 0.05s ease, color 0.2s ease, box-shadow 0.2s ease; }
+.primary:hover { background: #ff2626; color: #fff; box-shadow: 0 0 15px rgba(255, 38, 38, 0.8); }
+.primary:active { transform: translateY(1px); }
+.primary:disabled { opacity: 0.6; cursor: not-allowed; }
+.secondary { background: rgba(255,255,255,0.12); color: #ffffff; transition: background 0.2s ease, transform 0.05s ease; border: 1px solid rgba(255,255,255,0.18); }
+.secondary:hover { background: rgba(255,255,255,0.18); }
+.secondary:active { transform: translateY(1px); }
+.secondary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Only h3 inside the survey form should be black */
+.form h3 { color: #000000; }
+
+@media (max-width: 640px) {
+  .form { padding: 1.45rem 1rem 1.7rem; border-radius: 10px; }
+  .step h2 { font-size: 1.25rem; }
+  .input, .select { padding: 0.7rem 0.8rem; font-size: 0.95rem; }
+  .primary, .secondary { padding: 0.65rem 0.9rem; font-size: 0.95rem; }
+}

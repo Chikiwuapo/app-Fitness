@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.registro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;  
+  background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+  overflow-x: hidden;
+  padding: 20px;
+  gap: 50px;
+  flex-wrap: wrap; 
+}
+
+.registro-card {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 30px;
+  width: 700px;
+  animation: fadeInUp 0.8s ease;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.registro-title {
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Headings inside the registration form */
+.registro-card h3,
+.registro-form h3 {
+  color: #ffffff;
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+}
+
+.form-input {
+  background-color: transparent;
+  width: 100%;
+  padding: 10px; 
+  border: 2px solid #ddd;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #ff2626;
+  box-shadow: 0 0 8px rgba(255, 38, 38, 0.7);
+  outline: none;
+  transform: scale(1.02);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: #ff2626;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.registro-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.registro-button:hover {
+  background-color: #ff2626;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 38, 38, 0.8);
+}
+
+.social-registro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.google-button {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ddd;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.google-button:hover {
+  background-color: #ff2626;
+  color: #000;
+  box-shadow: 0 0 10px rgba(255, 38, 38, 0.8);
+}
+
+.register-link {
+  text-align: center;
+  color: #d0d0d0;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #ff2626;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.welcome-message {
+  max-width: 350px;
+  text-align: left;
+}
+
+.welcome-message h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.welcome-message h2 .fit {
+  color: red;
+}
+
+.welcome-message h3 {
+  font-size: 90px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.welcome-message p {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.welcome-message h1 {
+  font-size: 18px;
+  color: #CFCFCF;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .registro-container {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 80px;
+  }
+  .registro-card {
+    width: 80%;
+  }
+  .welcome-message {
+    max-width: 80%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .registro-card {
+    width: 100%;
+    padding: 20px;
+  }
+  .form-input {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .welcome-message h3 {
+    font-size: 60px;
+  }
+  .welcome-message p {
+    font-size: 18px;
+  }
+}
